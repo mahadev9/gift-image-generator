@@ -5,8 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Gift Image Generator - AI Powered",
-  description: "Create personalized gift card designs with AI-powered insights and creative suggestions",
+  title: "ThinkGift - AI Powered",
+  description: "Create personalized gift images with AI assistance",
 };
 
 export default function RootLayout({
