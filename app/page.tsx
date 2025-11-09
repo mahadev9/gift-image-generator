@@ -135,7 +135,10 @@ export default function Home() {
       console.error("Error:", error);
 
       // Create error message
-      const errorMessage = createMessage("assistant", `Error: ${error.message}`);
+      const errorMessage = createMessage(
+        "assistant",
+        `Error: ${error.message}`
+      );
       setMessages((prev) => [...prev, errorMessage]);
     } finally {
       setIsLoading(false);
@@ -150,17 +153,19 @@ export default function Home() {
     <div className="flex items-center justify-center min-h-screen bg-linear-to-br from-red-50 via-green-50 to-emerald-50 dark:from-slate-950 dark:via-green-950 dark:to-slate-900 px-6">
       <Card className="w-full max-w-7xl h-screen flex flex-col shadow-2xl border-0 overflow-hidden backdrop-blur-sm bg-white/95 dark:bg-slate-900/95 rounded-3xl">
         {/* Header */}
-        <CardHeader className="border-b bg-linear-to-r from-red-600 to-green-700 text-white py-4 relative overflow-hidden">
+        <CardHeader className="border-b bg-linear-to-r from-red-600 to-green-500 text-white py-4 relative overflow-hidden">
           {/* Animated Confetti */}
           <div className="absolute inset-0 pointer-events-none">
             {[...Array(20)].map((_, i) => (
               <div key={i} className="confetti" />
             ))}
             {[...Array(4)].map((_, i) => (
-              <div key={`j-${i}`} className="confetti-j">J</div>
+              <div key={`j-${i}`} className="confetti-j">
+                J
+              </div>
             ))}
           </div>
-          
+
           <CardTitle className="flex items-center gap-2 text-xl font-bold relative z-10">
             <div className="p-1.5 bg-white/20 rounded-lg backdrop-blur-sm ring-2 ring-yellow-400/30">
               <Gift className="w-6 h-6" />
